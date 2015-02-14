@@ -1,0 +1,204 @@
+
+** released as 0.6.2
+
+2009-06-26  Brian Berlin  <bberin73@gmail.com>
+* sdl_if.c: Changed default player 2 down to s key
+* sdl_if.c: Changed default sensitivity to 96 to fix Galaxian with digital stick
+* input.c : input_setup_keypad change stop to 16, fixes keypad #1 not working 
+*             at all
+* inputcfg.cpp: In changeGroup, fixed issue where currently selected control 
+*                 was not mCurrentCtrl 
+* util.c  : Updated util_init to use Windows user profile
+
+** released as 0.6.1
+
+2008-10-28  Brian Berlin  <bberin73@gmail.com>
+* too many changes to list, treat as new
+
+** released as 0.4.1
+
+2006-08-22  Brian Berlin  <jberlin@cfl.rr.com>
+* sdl_if.c: Changed axis_idle to 1 for joystick (lag)
+* sdl_if.c: Mask out key modifier in 'pc_poll_events' to get rid 
+*             of locks and reserved modifiers
+* sdl_if.c: Add UI keys to 'pc_button_down'
+
+** released as 0.4.0
+
+2006-07-11  Brian Berlin  <jberlin@cfl.rr.com>
+* gtia.c: Added 'gtia_set_byte_mode_2_artif' to handle hi res mode 
+*           colors
+* gtia.h: Added hi-res artifact variables
+
+2006-06-12  Brian Berlin  <jberlin@cfl.rr.com>
+* palette.c: Change phase shift, saturation, and phase multiplier 
+*              of internal default palette
+
+2006-06-04  Brian Berlin  <jberlin@cfl.rr.com>
+* kconfig.c, kconfig.h: Added artifacting parameter to configuration 
+* gui.cpp: Added Artifacts parameter to Video/Sound menu to 
+*            'gui_assign_default_menus'
+
+2006-06-02  Brian Berlin  <jberlin@cfl.rr.com>
+* boom6502.c: AND instruction not setting sign bit
+
+2006-05-31  Brian Berlin  <jberlin@cfl.rr.com>
+* sdl_if.c, sdl_if.h: Added 'pc_toggle_fullscreen' function
+
+2006-05-30  Brian Berlin  <jberlin@cfl.rr.com>
+* sdl_if.c: Changed 'pc_poll_events' to use UI Key param
+
+2006-05-29  Brian Berlin  <jberlin@cfl.rr.com>
+* gtia.c:  Changed 'gtia_init_prior array' not to use
+*            pm set and clear variables in lum-only modes (A.E.)
+
+2006-05-21  Brian Berlin  <jberlin@cfl.rr.com>
+* kconfig.c, kconfig.h: Added ui_keys parameter to configuration 
+
+2006-05-21  Brian Berlin  <jberlin@cfl.rr.com>
+* kconfig.c: Added Hangly Man and Pac-Man Plus to 'config_update'
+
+2006-05-21  Brian Berlin  <jberlin@cfl.rr.com>
+* gui.cpp: Added UI Keys to Main Menu
+
+2006-04-26  Brian Berlin  <jberlin@cfl.rr.com>
+* gtia.c:  Changed read CONSOL to use reg value & 0xb in
+*            'gtia_read_register' (Xari Arena and BC)
+
+2006-04-23  Brian Berlin  <jberlin@cfl.rr.com>
+* antic.c:  Take out dli_count 14 for Football. (CPU cycle count)
+*           Change JVB to use blank line cycle map.
+* boom6502.c:  Change Branch instructions to use extra
+*                cycle when branch taken.
+
+2006-04-21  Brian Berlin  <jberlin@cfl.rr.com>
+* gtia.c:   Implemented PRIOR=3 in 'gtia_init_prior_array' 
+*             (Castle Crises fix)
+
+2006-04-16  Brian Berlin  <jberlin@cfl.rr.com>
+* sdl_if.c:  Changed Pokey_sound_init in 'pc_init' to 
+*              Pokey_sound_update_freq
+* pokey.c:  Added Pokey_sound_init back to 'pokey_init'
+* pokeysound.c:  Added 'Pokey_sound_update_freq' function
+
+** released as 0.3.0
+
+2006-04-08  Brian Berlin  <jberlin@cfl.rr.com>
+* kconfig.c:  Added 'config_update' function to handle updates to 
+*               cart list and config file
+* kat5200.c:  Added call to 'config_update'
+
+2006-04-07  Brian Berlin  <jberlin@cfl.rr.com>
+* kconfig.c:  Fix 'config_save_cart_info' not saving in alphabetical 
+*               order
+* gtia.c:  Changed option_pressed to 0 in 'gtia_init' (Xari Arena fix)
+
+2006-04-06  Brian Berlin  <jberlin@cfl.rr.com>
+* boom6502.c:  Added ASO and SHX instructions (opcode 0x1f and 0x9e)
+* sdl_if.c:  Use axis_value with simulate_analog parameter
+*            Fix vertical axis deadzone issue
+
+2006-04-05  Brian Berlin  <jberlin@cfl.rr.com>
+* kconfig.c,kconfig.h:  Added simulate_analog parameter to t_atari_stick
+*                       and xml configuration.
+
+2006-04-04  Brian Berlin  <jberlin@cfl.rr.com>
+* gui.cpp:  Added Sensitivity parameter to Input menu
+* sdl_if.c:  Added pot_low and pot_high variables to handle range 
+*              configuration parameter
+
+2006-04-01  Brian Berlin  <jberlin@cfl.rr.com>
+* pokeysound.c:  Increase max samples from 2000 to 6000.
+* kconfig.c,kconfig.h:  Added sensitivity parameter to t_atari_stick 
+*                         and xml configuration.
+
+2006-03-27  Brian Berlin  <jberlin@cfl.rr.com>
+* memory.c: Added Missle Command+ to one chip rom list in 'load_cart'
+* util.c: Changed 'debug_print_value' to call pokey read register 
+*           function instead of using values 
+* cart5200.xml: Added Missle Command+
+* pokeysound.c: Fixed 'Pokey_process' high pass filters (Gassy Pacman).
+
+** released as 0.2.3
+
+2006-03-19  Brian Berlin  <jberlin@cfl.rr.com>
+* memory.c: Added Beamrider to one chip rom list in 'load_cart'
+* antic.c: Increase dli_count to 14 in 'antic_init' (Football timing fix).
+* cart5200.xml: Fix Castle Crises CRC.
+* kconfig.c: Changed 'config_save' to add parameters not found 
+*              (i.e. new parameters)
+* sdl_if.c: Added Pokey_sound_init to 'pc_init'
+* pokey.c: Took out Pokey_sound_init from here and put in sdl_if.c
+
+2006-03-18  Brian Berlin  <jberlin@cfl.rr.com>
+* pokey.c: Change 'pokey_init_scanline' to only send irq when 6502 is running
+*            (Pitfall II crash on top button fix).
+
+2006-03-17  Brian Berlin  <jberlin@cfl.rr.com>
+* kconfig.c, kconfig.h: Added sound_freq and sound_samples parameters to
+*                         t_config 
+* gui.cpp: Added ALT-F4 exits program to 'gui_poll_events'.
+* gui.cpp: Added Sound Samples and Sound Freq parameters ot
+*           'gui_assign_default' menus
+* sdl_if.c: Added ALT-F4 exits program to 'pc_poll_events'.
+* pokey.c:  Change 'Pokey_sound_init' function to use sound_freq parameter.
+
+2006-03-16  Brian Berlin  <jberlin@cfl.rr.com>
+* gui.cpp: Fixed input menu labeling for Top and Bottom buttons.
+
+** released as 0.2.2
+
+2006-03-15  Brian Berlin  <jberlin@cfl.rr.com>
+* kconfig.c, kconfig.h: Added deadzone paramerter to the stick structure.
+* gui.cpp: Added deadzone parameter to Input menu
+* sdl_if.c:  Implemented deadzone parameter to set center and changed how
+*              the analog range is done.
+
+2006-03-13  Brian Berlin  <jberlin@cfl.rr.com>
+* util.c: Fixed 'util_strip_to_directory' to null input string when no slashes
+*         found.  Fixes internal font file loading in WIN32.
+* gui.cpp: Added switch cases for unused enumerations to several functions to
+*         get rid of the million compiler warnings.
+* sdl_if.c:  Fixed problem in 'pc poll events' where the vertical axis wasn't
+*              updating it's axis_idle parameter.
+
+** released as 0.2
+
+2006-03-10  Brian Berlin  <jberlin@cfl.rr.com>
+* default_font.h: New file containing gzipped data for default font.
+* gui.cpp: Attempt to use internal font on load failure in 'gui_init'.
+
+2006-03-09  Brian Berlin  <jberlin@cfl.rr.com>
+* sdl_if.c: Fixed d-pad and analog centering in 'pc_poll_events'
+* sdl_if.c: added debug window function so we are never in fullscreen mode in
+*           debugger.
+* pokey.c:  Implemented a timer in 'pokey_init_scanline' for using voice mode 
+*           in pokeysound.
+* memory.c: Added support for Bounty Bob 3 seperate files in 'load_cart'.
+* memory.c: Added 4K cart support in 'load_cart'.
+* memory.c: Added many more 16K one-chip CRCs to 'load_cart'.
+
+2006-03-01  Brian Berlin  <jberlin@cfl.rr.com>
+* gtia.c: Changed 'gtia_write_register' to use PM transfer functions instead
+*         of do nothing when there is no PM DMA (Pitfall II logo fix).
+
+2006-01-30  Brian Berlin  <jberlin@cfl.rr.com>
+* xml_if.c, xml_if.h: New files for support of XML configuration
+* kconfig.c,kconfig.h:  Completely changed for XML support.
+* Added libxml2 library for XML configuration support
+
+2006-01-03  Brian Berlin  <jberlin@cfl.rr.com>
+* palette.c,palette.h: New files for support of color palette files.
+
+2005-12-11  Brian Berlin  <jberlin@cfl.rr.com>
+* gui.cpp,gui_util.cpp, gui_browse.cpp: new files for GUI
+* sdl_if.c: added GUI video setup function.
+* Added guichan library for GUI support
+
+2005-12-10  Brian Berlin  <jberlin@cfl.rr.com>
+* states.c, states.h: New files for save states
+
+2005-12-09  Brian Berlin  <jberlin@cfl.rr.com>
+* kat5200.h: Add CART_4K define
+
+* antic.c, gtia.c: Direct writes to GRAFx registers (Kaboom fix)

@@ -1,0 +1,104 @@
+Version 0.6.2 released (06/26/09)
+*  Fixed keypad button 1 not working at all
+*  Fixed Player 2 always using defaults stick configuration
+*  Fixed issue with Input Config where initially selected control was not saved
+*  Changed Player 2 default configuration
+*  Changed Default Sensitivity setting to 96 (Galaxian with digital input)
+*  Changed Windows version to use User's AppData directory to store files
+
+Version 0.6.1 released (10/28/08)
+*  GUI
+   - General Improvements
+   - Added Launcher to support Favorites list
+   - Added Atari 800/XL/XE images to Launcher list
+   - Added several User keys
+*  Video
+   - Changed drawing (less tearing?)
+   - Added 16/32-bit video modes
+   - Added Fullscreen mode configuration
+   - Added NTSC filter (thanks Blargg)
+   - Added 3x scaling
+   - Added Screenshots
+*  Core
+   - Atari 800/XL/XE support (see documentation)
+   - Fixed PM graphics in hi-res again (Bounter Bob Counter)
+   - Added PAL support
+   - Added INS instruction (Pac Pollux crash)
+*  Misc
+   - Changed configuration to SQLite database
+   - Improved directory handling (Frontends, Drag-N-Drop)
+   - Updated to latest GuiChan version
+   - Added INNO setup for Windows 
+   - Now open source
+   - NOT backward compatible with previous versions
+
+Version 0.5.0 released (11/13/07)
+*  Internal Release
+*  Atari 800/XL/XE support
+*  GUI Enhancements
+*  NTSC Filtering (partially works)
+
+Version 0.4.1 released (08/22/06)
+
+*  Fixed Back to GUI not working with some keyboards (Trebor, Paranoid reported)
+*  Fixed lag with going back to center with digital stick (Paranoid reported)
+*  Fixed mappping UI keys to joystick buttons (Trebor reported)
+
+Version 0.4.0 released (07/12/06)
+
+*  Fixed Sounds when going to GUI menu and back to game (DAC reported)
+*  Fixed Castle Crises blanking during countdown (PRIOR=3 implemented)
+*  Fixed Moon Patrol screwy graphics up top (CPU branch cycle count, DAC reported)
+*  Fixed Moon Patrol checkpoints not showing (Show PM past JVB, DAC reported)
+*  Fixed BC's Quest For Tires Crash (read from CONSOL, Trebor reported)
+*  Added Hangly Man and Pac-Man Plus hacks to cart list
+*  Added UI key mapping (PacManPlus request)
+*  Added toggle fullscreen UI key (Danno request)
+*  Fixed A.E. sprites not showing (PM colors in hi-res modes, Trebor,sut reported)
+*  Fixed Star Trek freezing up (AND not setting sign bit, sut reported)
+*  New default color palette for NTSC.
+*  Added Time Runner and Rally Speedway conversions to cart list
+*  Added Hi-Res modes artifact colors
+
+Version 0.3.0 released (04/08/06)
+
+*  Pacman with indigestion (Sound) fix
+*  Pokey pot values in debugger fixed
+*  Added Missle Command+ to cart list
+*  Added Sensitivity parameter (Thanks Jum!)
+*  Added Simulate Analog parameter, a.k.a. Pengo mode
+*  Added ASO and SHX instructions to CPU (Pac Pollux Hack works)
+*  Fix vertical axis (analog) deadzone issue (movement above center)
+*  Pitfall II logo scrolling fix (DLI timing, Trebor reported)
+*  Added Pac Pollux hack to cart list
+*  Added BC's Quest For Tires conversion to cart list
+*  Fix cart list not saving alphabetically
+*  Xari Arena paddles show up now (read from CONSOL, Scihorror reported)
+
+Version 0.2.3 released (03/19/06)
+
+*  Internal font file load fixed
+*  Vertical axis controller fix
+*  Added Stick Deadzone parameter to GUI (fix for Paranoid)
+*  Input Menu labeling fix
+*  ALT-F4 exits program (Trebor request)
+*  Added Sound Freq and Sound Samples to GUI
+*  Pitfall II top button crash fix (No IRQ during WSYNC, Trebor found problem)
+*  Football video timing fix (Increase DLI wait time by 1 cycle)
+*  Fix Castle Crises CRC in cart5200.xml
+*  Added Beamrider to 16K one chip list in cart loading
+
+Version 0.2 released (03/11/06)
+
+*  Integrated GUI
+*  XML Configuration
+*  Improved Rom List
+*  Color Palette improvements
+*  Pitfall II title screen fixed
+*  Kaboom fixed
+*  Rom Loading improvements
+*  D-Pad and Analog stick centering fixed (Paranoid reported)
+
+Version 0.1 released (11/30/05)
+
+*  Initial release

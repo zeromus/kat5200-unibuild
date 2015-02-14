@@ -1,0 +1,45 @@
+Compiling under Visual Studo 2008 Express
+------------------------------------------------------------------------------
+*  Download source for the guichan, sqlite, zlib, SDL, and SDL_image libraries
+*  Unpack the visualc++ files from the SDL source
+*  Edit the file kat5200.vsprops to point to the correct relative directories 
+     for the guichan, sqlite3, zlib, SDL, and SDL_image libraries.
+*  Edit the file kat5200.sln so it points to the correct location for the 
+     SDL.vcproj and SDLmain.vcproj files in the SDL source
+*  To compile SDL, you need the Direct X SDK, download and install from 
+     Microsoft
+*  Start Visual C++ and open kat5200.sln
+*  Under Tools->Options->Projects and Solutions->VC++ Directories:
+     - Under Include, add the directory for the Direct X SDK Include files
+     - Under Library Files, add the directory for the Direct X SDK Library 
+        files
+*  Build Solution
+*  Compile kat5200.iss with INNO setup to obtain the Installer
+
+Compiling under Unix
+------------------------------------------------------------------------------
+*  To compile, the user must have zlib ,libSDL, libSDL_image, and libguichan 
+   and their respective development libraries (-dev packages) installed. 
+*  Since libguichan versions are generally not compatiblity with each other 
+   yet, you may need to download the source and compile it as well. 
+*  Compile and make kat5200 as follows (must have root privilages):
+
+# tar xvzf kat5200-x.x.x.tar.gz
+# cd kat5200-x.x.x
+# ./configure
+# make
+# make install 
+
+* On debian based systems such as Ubuntu, adding the option to 'configure' 
+  '--prefix=/usr is probably desired.
+* Note that on many systems, instead of performing 'make install' the 
+  preferred way is to perform 'checkinstall' to automatically create and 
+  install a package.
+
+Building the database (src/sql directory)
+-------------------------------------------------------------------------------
+*  Download TOSEC dat files for the Atari 5200 and Atari 8-bit
+*  Use provided dat2sql to transform all dat files to sql files
+*  Use sqlite executable (download seperately) and create kat5200.db3
+*  Read Schema.sql into the database
+*  Read all other sql files into the database 

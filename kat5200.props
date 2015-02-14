@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <GUICHAN_DIR>libs\guichan-0.8.1</GUICHAN_DIR>
+    <SDL_IMAGE_DIR>libs\SDL_image-1.2.12</SDL_IMAGE_DIR>
+    <SDL_DIR>libs\SDL-1.2.15</SDL_DIR>
+    <ZLIB_DIR>libs\zlib-1.2.8</ZLIB_DIR>
+    <SQLITE3_DIR>SQLITE3</SQLITE3_DIR>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="GUICHAN_DIR">
+      <Value>$(GUICHAN_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SDL_IMAGE_DIR">
+      <Value>$(SDL_IMAGE_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SDL_DIR">
+      <Value>$(SDL_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ZLIB_DIR">
+      <Value>$(ZLIB_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SQLITE3_DIR">
+      <Value>$(SQLITE3_DIR)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

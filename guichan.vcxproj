@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_guichan|Win32">
+      <Configuration>Debug_guichan</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_guichan|Win32">
+      <Configuration>Release_guichan</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8968D94E-6E7C-4CE6-B154-41C70638FB05}</ProjectGuid>
+    <RootNamespace>guichan</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_guichan|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_guichan|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_guichan|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="kat5200.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_guichan|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="kat5200.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_guichan|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_guichan|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_guichan|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_guichan|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_guichan|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_guichan|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_guichan|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_guichan|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_guichan|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_guichan|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_guichan|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(GUICHAN_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_guichan|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(GUICHAN_DIR)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GUICHAN_DIR)\src\actionevent.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\basiccontainer.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\cliprectangle.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\color.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\defaultfont.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\event.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\exception.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\focushandler.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\font.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\genericinput.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\graphics.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\gui.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\guichan.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\image.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\imagefont.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\inputevent.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\key.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\keyevent.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\keyinput.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\mouseevent.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\mouseinput.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\rectangle.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\selectionevent.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widget.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\button.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\checkbox.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\container.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\dropdown.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\icon.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\imagebutton.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\label.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\listbox.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\radiobutton.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\scrollarea.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\slider.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\tab.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\tabbedarea.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\textbox.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\textfield.cpp" />
+    <ClCompile Include="$(GUICHAN_DIR)\src\widgets\window.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

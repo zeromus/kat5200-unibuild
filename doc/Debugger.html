@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+<title>Debugger - kat5200 Emulator</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="kat5200 Emulator">
+<meta name="generator" content="makeinfo 4.11">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Menus.html#Menus" title="Menus">
+<link rel="next" href="Troubleshooting-and-Issues.html#Troubleshooting-and-Issues" title="Troubleshooting and Issues">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+kat5200 Emulator is Copyright 2005-2008 by Brian Berlin.
+POKEY Sound is Copyright 1996 by Ron Fries.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 1, or (at your option)
+any later version.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Debugger"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="Troubleshooting-and-Issues.html#Troubleshooting-and-Issues">Troubleshooting and Issues</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Menus.html#Menus">Menus</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="unnumbered">Debugger</h2>
+
+<p>The debugger can be entered by either using the -debug option at startup,
+or by pressing the F1 key during the emulation.  This will bring the debug&gt;
+prompt at the console.  The following commands can be entered in the debugger:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">b type value</span></samp>&rsquo;<dd>Breakpoint command.  Types are: <br>
+sl - scanline (antic starts draw at scanline 8 in my emu)<br>
+mem - memory address (hex value)
+<br><dt>&lsquo;<samp><span class="samp">w value</span></samp>&rsquo;<dd>Watch command.  The debugger will look for a change at address specifed by
+value and break at that point. 
+<br><dt>&lsquo;<samp><span class="samp">d value</span></samp>&rsquo;<dd>Delete breakpoint specified by value. 
+<br><dt>&lsquo;<samp><span class="samp">t cpu:file</span></samp>&rsquo;<dd>Start trace of CPU to file specified by file.  BE CAREFUL! 
+File will grow very quickly.  Best used with breakpoints. 
+<br><dt>&lsquo;<samp><span class="samp">x cpu</span></samp>&rsquo;<dd>Stop trace of cpu and close file. 
+<br><dt>&lsquo;<samp><span class="samp">p type</span></samp>&rsquo;<dd>Print.  Types are: <br>
+cpu   - cpu registers <br>
+antic - antic registers <br>
+gtia  - gtia registers <br>
+pokey - pokey registers <br>
+dlist - antic display list <br>
+mem value - memory from value <br>
+mem value addresses b - number of addresses of memory from value in binary form
+<br><dt>&lsquo;<samp><span class="samp">s</span></samp>&rsquo;<dd>Single step through cpu code. 
+<br><dt>&lsquo;<samp><span class="samp">c</span></samp>&rsquo;<dd>Continue emulation. 
+<br><dt>&lsquo;<samp><span class="samp">h</span></samp>&rsquo;<dd>Print debugger help. 
+<br><dt>&lsquo;<samp><span class="samp">q</span></samp>&rsquo;<dd>Quit to the GUI. 
+</dl>
+
+   </body></html>
+

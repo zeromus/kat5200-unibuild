@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+<title>Troubleshooting and Issues - kat5200 Emulator</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="kat5200 Emulator">
+<meta name="generator" content="makeinfo 4.11">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Debugger.html#Debugger" title="Debugger">
+<link rel="next" href="Plans.html#Plans" title="Plans">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+kat5200 Emulator is Copyright 2005-2008 by Brian Berlin.
+POKEY Sound is Copyright 1996 by Ron Fries.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 1, or (at your option)
+any later version.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Troubleshooting-and-Issues"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="Plans.html#Plans">Plans</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Debugger.html#Debugger">Debugger</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="unnumbered">Troubleshooting and Issues</h2>
+
+<p>Errors:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Errors about Side by Side assembiles on application startup</span></samp>&rsquo;<dd>Verify the Visual C++ 2008 SP1 Redistributable is installed.  If needed,
+visit <a href="http://www.microsoft.com/downloads/details.aspx?familyid=A5C84275-3B97-4AB7-A40D-3802B2AF5FC2&amp;displaylang=en">http://www.microsoft.com/downloads/details.aspx?familyid=A5C84275-3B97-4AB7-A40D-3802B2AF5FC2&amp;displaylang=en</a>
+<br><dt>&lsquo;<samp><span class="samp">Errors about Incorrect Configuration on application startup</span></samp>&rsquo;<dd>See above. 
+<br><dt>&lsquo;<samp><span class="samp">Error Loading BIOS image</span></samp>&rsquo;<dd>This indicates that the emulator is not aware of the BIOS file for the
+current machine.  These are files the user must have on their computer.  In
+the GUI, check Machine-&gt;BIOS Files and verify the correct BIOS files have
+been setup.  If not use the Browse button to pick out the BIOS file.  Also,
+BIOS files may be scanned for from Misc-&gt;Wizard. 
+<br><dt>&lsquo;<samp><span class="samp">Error Loading BASIC image</span></samp>&rsquo;<dd>See above regarding BIOS files. 
+<br><dt>&lsquo;<samp><span class="samp">Error Loading ROM image</span></samp>&rsquo;<dd>This indicates the emulator was not able to load the desired ROM image.  The
+image must exist on the user's computer.  If attempting to load from
+the Launcher, select the file and check the File tab at the bottom.  If the
+box is empty, then the file has not been found.  Use the Misc-&gt;Scan For Files
+option from the Launcher, or the Misc-&gt;Wizard option from the main GUI to scan
+for files.  From the Launcher, the user may use the View-&gt;Available option to
+see the list of images that have been found after scanning. 
+<br><dt>&lsquo;<samp><span class="samp">CPU Crashed.  Enter Debugger?</span></samp>&rsquo;<dd>This could mean several things:
+          <ul>
+<li>You could have a bad rom dump.  Download from another site and
+re-try. 
+<li>Loading a floppy or cassette image with the SIO Patch enabled.  Try to disable
+it and see if that works.  You can specify an image not use the patch from the
+Launcher. 
+<li>Loading an 8-bit image with BASIC enabled / disabled.  Try toggling this and
+see if that works.  You can specifiy an whether or not an image uses BASIC
+from the Launcher.  Please report images that need BASIC and it is not set in
+the Launcher by default. 
+<li>The emulator is using the wrong mapping for the image.  If the user knows the
+correct mapping for the image, it can be set in the Launcher under the
+Settings tab.  Please report images that are using the wrong mapping. 
+<li>The emulator does not support the image.  Please report images that don't work
+after trying the above suggestions. 
+</ul>
+     </dl>
+
+   <p>Other Issues:
+
+     <ul>
+<li>If nothing happens when launching a cassette image,  make sure to hit spacebar to
+get the image loading. 
+<li>SDL Sound can be tricky under Linux and can slow down the emulation tremendously. 
+See the SDL website (FAQs) for how to set environment variables that might help. 
+<li>Using WindowBlinds in WinXP will cause the program to come up in a tiny window. 
+Either fix this by minimizing and restoring the window or by setting kat5200 to
+run in Windows 2000 compatibility mode. 
+<li>When using the GameBase frontend with kat5200, make sure your roms do not have
+dashes in the filename. (ex, "Pac-Man.bin")
+</ul>
+
+   </body></html>
+

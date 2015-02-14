@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+<title>General Usage - kat5200 Emulator</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="kat5200 Emulator">
+<meta name="generator" content="makeinfo 4.11">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Installation.html#Installation" title="Installation">
+<link rel="next" href="Menus.html#Menus" title="Menus">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+kat5200 Emulator is Copyright 2005-2008 by Brian Berlin.
+POKEY Sound is Copyright 1996 by Ron Fries.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 1, or (at your option)
+any later version.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="General-Usage"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="Menus.html#Menus">Menus</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Installation.html#Installation">Installation</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="unnumbered">General Usage</h2>
+
+<p>kat5200 can be run from the command line or from a windowed environment. 
+It will start with the last rom image run or with the GUI if no rom image
+found, no BIOS found, or if specified from the GUI.
+
+   <p>Basic Usage (Command Line):
+
+   <p><code>kat5200 [ -options value] rom_file_name | sql_file_name</code>
+
+   <p>The setup and control of the program is performed via the <samp><span class="file">kat5200.db3</span></samp>
+sqlite database file.  On a Windows system, this file is located in the User's
+application data directory.  This is something like
+<samp><span class="file">C:\Documents and Settings\user\Application Data</span></samp> in XP. 
+On *nix systems it will be searched for in the
+user's home directory first (as <samp><span class="file">.kat5200/kat5200.db3</span></samp>), then in
+<samp><span class="file">/etc/kat5200</span></samp>.  In General, configuration settings are edited through the
+GUI menus but can be overridden through command line options (see the options
+below). Also note that SQL files are accepted and are run against the database.
+
+<h3 class="unnumberedsec">Command Line Options</h3>
+
+<p>The following options are allowed. They can be in any order but must come
+before the <samp><span class="file">rom_file_name</span></samp>.
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">-debug</span></samp>&rsquo;<dd>Start the program in debug mode. 
+<br><dt>&lsquo;<samp><span class="samp">-width</span></samp>&rsquo;<dd>Width to use in windowed mode or desired fullscreen width
+<br><dt>&lsquo;<samp><span class="samp">-height</span></samp>&rsquo;<dd>Height to use in windowed mode or desired fullscreen height
+<br><dt>&lsquo;<samp><span class="samp">-fullscreen value</span></samp>&rsquo;<dd>FullScreen: 1 for Yes, 0 for No.  Video mode is independant of this setting. 
+<br><dt>&lsquo;<samp><span class="samp">-widescreen value</span></samp>&rsquo;<dd>Widescreen: 1 for Yes, 0 for No.  Shows extra pixels on left and right. 
+<br><dt>&lsquo;<samp><span class="samp">-zoom value</span></samp>&rsquo;<dd>Zoom can be 1-3 and the video screen will be scaled by the value. 
+<br><dt>&lsquo;<samp><span class="samp">-mouse_speed value</span></samp>&rsquo;<dd>Mouse Speed can be 1-5 with 3 as the default. 
+<br><dt>&lsquo;<samp><span class="samp">-sound value</span></samp>&rsquo;<dd>Sound: 1 for On, 0 for Off. 
+<br><dt>&lsquo;<samp><span class="samp">-throttle value</span></samp>&rsquo;<dd>Speed throttling in percent (0 for full speed). 
+<br><dt>&lsquo;<samp><span class="samp">-start_with_gui value</span></samp>&rsquo;<dd>Start the emulator with the GUI: 1 for Yes, 0 for No. 
+<br><dt>&lsquo;<samp><span class="samp">-start_gui_with_launcher value</span></samp>&rsquo;<dd>Start the GUI with Launcher: 1 for Yes, 0 for No. 
+<br><dt>&lsquo;<samp><span class="samp">-system_type value</span></samp>&rsquo;<dd>This is PAL or NTSC. 
+<br><dt>&lsquo;<samp><span class="samp">-basic_enable value</span></samp>&rsquo;<dd>Enable BASIC in the 8-bit mode: 1 for Yes, 0 for No. 
+<br><dt>&lsquo;<samp><span class="samp">-sio_patch value</span></samp>&rsquo;<dd>Enable the SIO Patch in the 8-bit mode: 1 for Yes, 0 for No. 
+<br><dt>&lsquo;<samp><span class="samp">-machine_type value</span></samp>&rsquo;<dd>This can be 800/800XL/800XE/5200. 
+<br><dt>&lsquo;<samp><span class="samp">-state profile</span></samp>&rsquo;<dd>This loads up the entered state profile. 
+<br><dt>&lsquo;<samp><span class="samp">-quick_state value</span></samp>&rsquo;<dd>This loads up the quick state, value can be 1-9. 
+</dl>
+
+   <p>User Keys (settings can be overidden in the GUI):
+
+     <ul>
+<li>&lt;ESC&gt; - Quit the current emulation and go to GUI
+<li>&lt;ALT-F4&gt; - Quit the program. 
+<li>&lt;F1&gt;  - Enter debugger
+<li>&lt;ALT-ENTER&gt;  - Toggle Fullscreen
+<li>&lt;ALT-s&gt;  - Take screenshot
+<li>&lt;ALT-1&gt; to &lt;ALT-9&gt;  - Load state from slot 1-9
+<li>&lt;SHIFT-1&gt; to &lt;SHIFT-9&gt;  - Save state to slot 1-9
+</ul>
+
+<h3 class="unnumberedsec">GUI Usage</h3>
+
+<p>The GUI will show when the emulator is started without being able to load the
+current rom image file or BIOS or when the &lt;ESC&gt; key is pressed while in
+the emulation.
+
+   </body></html>
+

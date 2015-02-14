@@ -1,0 +1,371 @@
+<html lang="en">
+<head>
+<title>Menus - kat5200 Emulator</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="kat5200 Emulator">
+<meta name="generator" content="makeinfo 4.11">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="General-Usage.html#General-Usage" title="General Usage">
+<link rel="next" href="Debugger.html#Debugger" title="Debugger">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+kat5200 Emulator is Copyright 2005-2008 by Brian Berlin.
+POKEY Sound is Copyright 1996 by Ron Fries.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 1, or (at your option)
+any later version.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Menus"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="Debugger.html#Debugger">Debugger</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="General-Usage.html#General-Usage">General Usage</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="unnumbered">Menus</h2>
+
+<p>The GUI menu system is used to perform configuration, emulation launching and
+other tasks.  Configuration changes are saved to the database file
+<samp><span class="file">kat5200.db3</span></samp>.
+
+<h3 class="unnumberedsec">File</h3>
+
+<p>The File menu contains the following:
+
+     <dl>
+<dt><code>Load Rom</code><dd>This menu item brings up a file browser allowing the user to navigate to a rom
+image to load.  The selected image is then lauched, i.e. the system is cold
+started, rather than just being attached to the emulated device. 
+<br><dt><code>Save State</code><dd>This menu item brings up a profile browser, where the user may save the
+current emulated state to an existing profile or new one. 
+The state is saved to the database under a unique profile name. 
+<br><dt><code>Load State</code><dd>This menu item brings up a profile browser, allowing the user to load a saved
+state.  The emulation is then immediately started. 
+<br><dt><code>Quick Save State</code><dd>This menu item allows the user to save the current emulated state to one of
+nine slots
+<br><dt><code>Quick Load State</code><dd>This menu item allows the user to load one of nine saved states. The
+emulation is then immediately started. 
+<br><dt><code>Launcher</code><dd>This menu item brings up the launcher window, allowing the user to launch or
+configure rom images.  Described in detail below. 
+<br><dt><code>Back to Game</code><dd>This menu item enters back into the emulation. 
+<br><dt><code>Exit</code><dd>This menu item exits the emulator. 
+</dl>
+
+<h4 class="unnumberedsubsec">Launcher</h4>
+
+<p>The Launcher is a window containing a list of known images for the user to
+configure and load (file name of the image must be set to load).  The user
+selects an image by clicking it in the list and launches it by
+double-clicking or selecting and pressing &lt;ENTER&gt;.  The user may search
+for images using the scrollbar or by typing the characters in the image name
+to navigate down the list.  For each image, the user may configure things such
+as input profile, image file, and machine settings. <br>
+<br>
+The Laucher Media Image menu contains the following options:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Launch</span></samp>&rsquo;<dd>This launches the currently the selected image, i.e. the image is attached and
+a cold start is performed. 
+<br><dt>&lsquo;<samp><span class="samp">Launch - No Reset</span></samp>&rsquo;<dd>This loads and attaches the image to the emulated device.  The machine is not
+reset. 
+<br><dt>&lsquo;<samp><span class="samp">Attach</span></samp>&rsquo;<dd>This is the same as Launch - No Reset, except the user may choose which
+emulated device to attach the image to. 
+<br><dt>&lsquo;<samp><span class="samp">Delete</span></samp>&rsquo;<dd>This menu item deletes the currently selected entry from the list permanently. 
+<br><dt>&lsquo;<samp><span class="samp">Add to Favorites / Remove from Favorites</span></samp>&rsquo;<dd>This menu item adds the currently selected image to the favorites list.  This
+list can be shown from the View menu.  If the image is in the favorites list,
+the user has the option to remove it from favorites. 
+</dl>
+
+   <p>The View menu contains the following options:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">All - Shows all images in the database</span></samp>&rsquo;<br><dt>&lsquo;<samp><span class="samp">Available - Shows all images found on the user's system.</span></samp>&rsquo;<br><dt>&lsquo;<samp><span class="samp">Unavailable - Shows all images not found on the user's system.</span></samp>&rsquo;<br><dt>&lsquo;<samp><span class="samp">Favorites - Shows images the user has added to the favorites list.</span></samp>&rsquo;<dd></dl>
+
+   <p>The Misc menu contains the following options:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Add Media Image</span></samp>&rsquo;<dd>This menu item brings up a file browser, allowing the user to navigate to an
+image to add to the database.  The image name will be based on the filename. 
+<br><dt>&lsquo;<samp><span class="samp">Scan for Files</span></samp>&rsquo;<dd>This menu item brings up a file browser, allowing the user to navigate to the
+desired directory to scan.  Files in that directory and (optionally) in any
+sub-directories will be scanned for matches in the image database.  Any images
+found will have their File attribute set and may be loaded from the Launcher. 
+<br><dt>&lsquo;<samp><span class="samp">Options</span></samp>&rsquo;<dd>This menu item brings up a window allow the user to set launcher window
+options.  The user may select to view rom images for the selected
+machine or to view all rom images.  Also the user may select to seperate the
+list into tabbed views.  This can be done by TOSEC dat file type, media type
+(cart, floppy, cassette, executable), or alphanumerically (no more than 1000
+images per tab). 
+</dl>
+
+   <p>At the bottom of the Launcher window is a tabbed view with rom image settings
+for the selected image.
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Image</span></samp>&rsquo;<dd>On this tab, the user may set the title of the image, and machine type. 
+<br><dt>&lsquo;<samp><span class="samp">File</span></samp>&rsquo;<dd>On this tab, the user may set the file containing the image, and shows various
+rom image statistics. 
+<br><dt>&lsquo;<samp><span class="samp">Profiles</span></samp>&rsquo;<dd>On this tab, the user may choose a specific input, video, or sound profile to
+use with the image, or to choose to use the defaults for each. 
+<br><dt>&lsquo;<samp><span class="samp">Settings</span></samp>&rsquo;<dd>For images belonging to the 8-bit machine, the user may set whether to load
+BASIC with the image, whether to use the SIO patch to load the image, and
+amount of RAM to use.  For both machine types, mapping the image to a specific
+type can be done.  This is especially useful if it seems the emulator is
+loading the image incorrectly when set to auto, the user may attempt to fix
+this. 
+</dl>
+
+<h3 class="unnumberedsec">Machine</h3>
+
+<p>The Machine menu contains the following (when launching rom images, the
+settings for the particular image will override these):
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">System</span></samp>&rsquo;<dd>The menu item allows the user may choose between Atari 5200, Atari 800,
+Atari XL/XE. 
+<br><dt>&lsquo;<samp><span class="samp">RAM</span></samp>&rsquo;<dd>This menu item allows the user to choose the amount of RAM to emulate. 
+<br><dt>&lsquo;<samp><span class="samp">Video</span></samp>&rsquo;<dd>This menu item allows the user to choose between NTSC and PAL video systems. 
+<br><dt>&lsquo;<samp><span class="samp">Throttle</span></samp>&rsquo;<dd>This menu item brings up a window to set the speed of the emulation.  100%
+represents normal speed.  Checking 'Run as fast as possible' will cause the
+emulation to run as fast as the PC will allow. 
+<br><dt>&lsquo;<samp><span class="samp">BIOS Files</span></samp>&rsquo;<dd>This menu item brings up a window allowing the user to set the BIOS and BASIC
+files used with each of the machines.  The user may use the Browse buttons to
+bring up a file browser to select the file.  These fields are also populated
+automatically during a scan if the appropiate files are found. 
+<br><dt>&lsquo;<samp><span class="samp">Media</span></samp>&rsquo;<dd>This menu item brings up a window showing using currently attached rom images
+to the each of the emulated devices.  The user may also attach rom images by
+using the Browse buttons to bring up a file browser to select the file. 
+<br><dt>&lsquo;<samp><span class="samp">SIO Patch</span></samp>&rsquo;<dd>This check menu item allows the user to select to use the SIO patch or not. 
+The SIO Patch allows for fast loading of floppy and cassette images, but may
+not be compatible with all rom images. 
+<br><dt>&lsquo;<samp><span class="samp">BASIC Enabled</span></samp>&rsquo;<dd>This check menu item allows the user to select to boot the system with BASIC
+enabled or not.  Some rom images require BASIC to work, but most won't work
+with it enabled.  Therefore, it's generally best to leave this off and set
+BASIC to on for the individual images that need it in the Launcher. 
+<br><dt>&lsquo;<samp><span class="samp">Reset</span></samp>&rsquo;<dd>This menu item allows the user to Reset the emulated machine.  This can be a
+warm (CPU reset) or Cold (Power cycle). 
+</dl>
+
+<h3 class="unnumberedsec">View</h3>
+
+<p>The View menu contains the following:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Screen Size</span></samp>&rsquo;<dd>This menu item allows the user to set the zoom.  Also available in the Video
+configuration. 
+<br><dt>&lsquo;<samp><span class="samp">Fullscreen</span></samp>&rsquo;<dd>This check menu item allows the user to toggle between fullscreen and
+windowed mode. Takes effect when exiting the GUI back to the emulation. 
+</dl>
+
+<h3 class="unnumberedsec">Options</h3>
+
+<p>The Options menu contains the following:
+
+<h4 class="unnumberedsubsec">Video</h4>
+
+<p>This menu item brings up the Video configuration window with the following
+options:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Profile</span></samp>&rsquo;<dd>This section allows the user to choose which video profile to setup.  The user
+may also save the current configuration to a new profile and may set which
+profile is used by default. 
+<br><dt>&lsquo;<samp><span class="samp">NTSC Filter</span></samp>&rsquo;<dd>This sections allows the user to enable, disable, and configure NTSC
+television effects.  Presets for RF, Composite, S-Video, and RGB are
+provided. 
+<br><dt>&lsquo;<samp><span class="samp">Fullscreen</span></samp>&rsquo;<dd>This check box allows the user to toggle between fullscreen and
+windowed mode. 
+<br><dt>&lsquo;<samp><span class="samp">Widescreen</span></samp>&rsquo;<dd>This check box allows the user to choose to display extra pixels on the left
+and right of the screen. 
+<br><dt>&lsquo;<samp><span class="samp">Zoom</span></samp>&rsquo;<dd>This drop down allows the user to set the zoom from 1-3 times normal size. 
+<br><dt>&lsquo;<samp><span class="samp">Depth</span></samp>&rsquo;<dd>This drop down allows the user to set the color depth to 8, 16, or 32 bit. 
+<br><dt>&lsquo;<samp><span class="samp">Specify Window</span></samp>&rsquo;<dd>This provides the user to manually set the width and height of the window
+showing the emulation.  It is automatically enalarged if numbers too small to
+show the screen are input.  Also, in fullscreen mode the closest allowed mode
+is used. 
+<br><dt>&lsquo;<samp><span class="samp">Screen Image</span></samp>&rsquo;<dd>Also included is a screen shot of the current emulation.  The user may use the
+mouse to drag to different parts of the screen.  This can be useful to see
+the effects of any palette changes or NSTC filter adjustments. 
+</dl>
+
+<h4 class="unnumberedsubsec">Sound</h4>
+
+<p>This menu item brings up the Sound configuration window with the following
+options:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Profile</span></samp>&rsquo;<dd>This section allows the user to choose which sound profile to setup.  The user
+may also save the current configuration to a new profile and may set which
+profile is used by default. 
+<br><dt>&lsquo;<samp><span class="samp">Enable Sound</span></samp>&rsquo;<dd>This check box allows the user to enable / disable all sound. 
+<br><dt>&lsquo;<samp><span class="samp">Frequency</span></samp>&rsquo;<dd>This drop down allows the user to set the sampling frequency.  Generally, set
+this to the highest value that does not affect performance.  The default
+should work well for most systems. 
+<br><dt>&lsquo;<samp><span class="samp">Samples</span></samp>&rsquo;<dd>This drop down allows the user to set the sound buffer size in samples.  The
+default should work for most systems, but the user may tweak to improve
+performance. 
+</dl>
+
+<h4 class="unnumberedsubsec">Input</h4>
+
+<p>This menu item brings up the Input configuration window with the following
+options (each player and the keyboard are tabbed and set seperately):
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Profile</span></samp>&rsquo;<dd>This section allows the user to choose which input profile to setup.  The user
+may also save the current configuration to a new profile and may set which
+profile is used by default. 
+<br><dt>&lsquo;<samp><span class="samp">Controller / Paddles / Joystick / Keypad</span></samp>&rsquo;<dd>These sections contain buttons for each controller function.  Push the button
+to see the current settings in the PC Input section. 
+<br><dt>&lsquo;<samp><span class="samp">PC Input</span></samp>&rsquo;<dd>This section provides the user with a way to setup the currently selected
+controller function.  Generally it is best to use Auto-Detect and then perform
+the desired action to setup.
+          <dl>
+<dt>&lsquo;<samp><span class="samp">Device</span></samp>&rsquo;<dd>This is Keyboard, Joystick, or Mouse
+<br><dt>&lsquo;<samp><span class="samp">Device Num</span></samp>&rsquo;<dd>This is the index of the device as detected by SDL.  Only applies to joysticks
+and when there are multiple joysticks connected to the system. 
+<br><dt>&lsquo;<samp><span class="samp">Part Type</span></samp>&rsquo;<dd>For a joystick, this can be an Axis, Button, D-Pad, or Trackball.  For a Mouse
+this can be an Axis or a Button.  For the keyboard, this can only be a Key. 
+<br><dt>&lsquo;<samp><span class="samp">Part Num</span></samp>&rsquo;<dd>For a joystick or mouse, this is the index of the part as detected by SDL.  For
+the keyboard, this is the key. 
+<br><dt>&lsquo;<samp><span class="samp">Direction</span></samp>&rsquo;<dd>For a D-Pad, this can be Left, Right, Up, or Down.  For an axis it can be + or
+-.  For a key or button, this can be Pressed or Released. 
+</dl>
+     <br><dt>&lsquo;<samp><span class="samp">A5200 / A800 Controller</span></samp>&rsquo;<dd>This sections allows the user to set the controller type for the selected player. 
+<br><dt>&lsquo;<samp><span class="samp">PC Control Settings</span></samp>&rsquo;<dd>These settings apply to emulation of the 5200 Joystick and 8-bit Paddle
+controllers only.
+          <dl>
+<dt>&lsquo;<samp><span class="samp">Sensitivity</span></samp>&rsquo;<dd>This slider allows the user to change the range of the atari pot values. 
+For some 5200 games like Gorf, Missle Command, and Super Breakout, setting
+this to somewhere between 50 and 75 percent when using an analog stick can
+make the game more playable.  This can also be used with Simulate Analog
+for "Pengo" type games. 
+<br><dt>&lsquo;<samp><span class="samp">Deadzone</span></samp>&rsquo;<dd>This slider allows the user to set the deadzone of the user's analog
+controller.  A lower value will give the user a wider analog range but could
+cause jitter, while a higher value will reduce jitter, but will also reduce
+range.  This is 20% by default.  The preference would be to set this to the
+lowest value that has no jitter. 
+<br><dt>&lsquo;<samp><span class="samp">Simulate Analog</span></samp>&rsquo;<dd>When using the keyboard, D-Pad, or digital stick as a controller, checking
+this can make games where the position of the analog stick is important
+(as opposed to direction) more playable.  This is similiar to Pengo mode in
+VSS and Jum52.  Useful for 5200 games like Gorf, Missle Command, and Super
+Breakout. 
+</dl>
+     <br><dt>&lsquo;<samp><span class="samp">Mouse Speed</span></samp>&rsquo;<dd>Mouse speed can be set to a value 1-5.  For using the mouse as the 5200
+trackball, a setting of 3 is good.  For using the mouse as the 8-bit paddles
+a setting of 1 is good. 
+</dl>
+
+<h4 class="unnumberedsubsec">User Interface</h4>
+
+<p>This menu item brings up the User Interface configuration window with the
+following options:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Profile</span></samp>&rsquo;<dd>This section allows the user to choose which user interface profile to setup. 
+The user may also save the current configuration to a new profile and may set
+which profile is used by default. 
+<br><dt>&lsquo;<samp><span class="samp">Font</span></samp>&rsquo;<dd>This is the font file used.  It must comply with Guichan standards for Image
+Font. Use the browse button to set the file. 
+<br><dt>&lsquo;<samp><span class="samp">Start Options</span></samp>&rsquo;<dd>This section provides the user with the ability to control what happens at
+program start.  By default the program will enter the emulation with the last
+rom image run.  The user may choose to have the program start with the GUI as
+well as having the GUI always start up with the Launcher window. 
+<br><dt>&lsquo;<samp><span class="samp">Controls</span></samp>&rsquo;<dd>These sections contains buttons for each user function.  Push the button
+to see the current settings in the PC Input section. 
+<br><dt>&lsquo;<samp><span class="samp">PC Input</span></samp>&rsquo;<dd>This section provides the user with a way to setup the currently selected
+user function.  Generally it is best to use Auto-Detect and then perform
+the desired action to setup.
+          <dl>
+<dt>&lsquo;<samp><span class="samp">Device</span></samp>&rsquo;<dd>This is Keyboard, Joystick, or Mouse
+<br><dt>&lsquo;<samp><span class="samp">Device Num</span></samp>&rsquo;<dd>For a key, this can be can be modifier such as ALT, SHIFT, or CTRL. Otherwise,
+this is the index of the device as detected by SDL.  Only applies to joysticks
+and when there are multiple joysticks connected to the system. 
+<br><dt>&lsquo;<samp><span class="samp">Part Type</span></samp>&rsquo;<dd>For a joystick, this can be an Axis, Button, D-Pad, or Trackball.  For a Mouse
+this can be an Axis or a Button.  For the keyboard, this can only be a Key. 
+<br><dt>&lsquo;<samp><span class="samp">Part Num</span></samp>&rsquo;<dd>For a joystick or mouse, this is the index of the part as detected by SDL.  For
+the keyboard, this is the key. 
+<br><dt>&lsquo;<samp><span class="samp">Direction</span></samp>&rsquo;<dd>For a D-Pad, this can be Left, Right, Up, or Down.  For an axis it can be + or
+-.  For a key or button, this can be Pressed or Released. 
+</dl>
+     </dl>
+
+<h3 class="unnumberedsec">Misc</h3>
+
+<p>This menu contains the following functions:
+
+<h4 class="unnumberedsubsec">Palette</h4>
+
+<p>This menu item allows the user to perform the following:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Import</span></samp>&rsquo;<dd>This menu item brings up a window allowing the user to browse to an Atari800
+palette file to import into kat5200.  The user must provide a profile name for
+the new palette. 
+<br><dt>&lsquo;<samp><span class="samp">Export</span></samp>&rsquo;<dd>This menu item brings up a window allowing the user to choose a Palette to
+export.  Once the Export button is pressed a file browser is brought up
+allowing the user to save to an Atari800 palette file. 
+<br><dt>&lsquo;<samp><span class="samp">Edit</span></samp>&rsquo;<dd>This menu item brings up a window allowing the user to select and edit
+palettes. To edit enter in the index of the color to edit and press enter. 
+Then change or view the color.  Colors are in hexidecimal and are RRGGBB
+values. 
+</dl>
+
+<h4 class="unnumberedsubsec">Create Media</h4>
+
+<p>This menu item brings up a window allowing the user to create either a floppy
+or a cassette image for use with the 8-bit machines.
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Disk</span></samp>&rsquo;<dd>To create a floppy disk image, the user should setup the sector size, boot
+type, and number for sectors.  Use the Create button to choose a file name
+and create the image. 
+<br><dt>&lsquo;<samp><span class="samp">Cassette</span></samp>&rsquo;<dd>To create a cassette image, the user should type in a description (optional)
+and use the create button. 
+</dl>
+
+<h4 class="unnumberedsubsec">Wizard</h4>
+
+<p>This menu item bring up the Configuration Wizard, allowing the user to setup
+several items at once.
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">Video</span></samp>&rsquo;<dd>The user may set the video system (PAL or NTSC), zoom, and fullscreen
+preferences. 
+<br><dt>&lsquo;<samp><span class="samp">Rom Image Directories</span></samp>&rsquo;<dd>Scanning for rom images allows them to be loaded from the launcher.  The
+user may choose to scan for 8-bit, 5200, and BIOS images.  The "best fit"
+BIOS images will be selected for each machine type.  These may be edited
+from the Machine-&gt;BIOS Files menu item. 
+<br><dt>&lsquo;<samp><span class="samp">Primary Input Device</span></samp>&rsquo;<dd>This allows the user to setup the primary input device.  This can either be
+a joystick or keyboard (mouse is not selectable here).  Generally, the user
+should use the Auto-Detect button to automatically detect the correct control
+device.  The Wizard will create a new input profile and set it as the default. 
+ The user may edit it in the Options-&gt;Input menu item. 
+</dl>
+
+<h4 class="unnumberedsubsec">View Log</h4>
+
+<p>This menu item brings up the contents of the log file <samp><span class="file">kat5200.log</span></samp>. 
+This can useful for viewing details of any errors that have occured.  The
+file is located in the user's application data directory in windows or
+in the <samp><span class="file">.kat5200</span></samp> directory in the user's home directory for *nix systems.
+
+   </body></html>
+

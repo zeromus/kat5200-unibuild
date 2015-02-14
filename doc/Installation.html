@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+<title>Installation - kat5200 Emulator</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="kat5200 Emulator">
+<meta name="generator" content="makeinfo 4.11">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Requirements.html#Requirements" title="Requirements">
+<link rel="next" href="General-Usage.html#General-Usage" title="General Usage">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+kat5200 Emulator is Copyright 2005-2008 by Brian Berlin.
+POKEY Sound is Copyright 1996 by Ron Fries.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 1, or (at your option)
+any later version.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Installation"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="General-Usage.html#General-Usage">General Usage</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Requirements.html#Requirements">Requirements</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="unnumbered">Installation</h2>
+
+<h3 class="unnumberedsec">Windows</h3>
+
+     <ol type=1 start=1>
+<li>Download and run the Windows installer
+<li>Verify the Visual C++ 2008 SP1 Redistributable is installed.  If needed,
+visit the <a href="http://www.microsoft.com/downloads/details.aspx?familyid=A5C84275-3B97-4AB7-A40D-3802B2AF5FC2&amp;displaylang=en">download site</a>
+(this is offered during install).
+     </ol>
+
+<h3 class="unnumberedsec">*nix</h3>
+
+<p>For *nix versions, you must have zlib ,libSDL, libSDL_image, and libguichan
+already installed as well as the development libraries (add <samp><span class="file">-dev</span></samp> to
+the package name)!  Complile the source as root as follows (replace
+<samp><span class="command">x.x.x</span></samp> with the version downloaded): <br> <br>
+<samp><span class="command"> # tar xvzf kat5200-x.x.x.tar.gz </span></samp> <br>
+<samp><span class="command"> # cd kat5200-x.x.x </span></samp> <br>
+<samp><span class="command"> # ./configure </span></samp> <br>
+<samp><span class="command"> # make </span></samp> <br>
+<samp><span class="command"> # make install </span></samp> <br> <br>
+Also, note that libguichan versions are generally not compatiblity with each
+other yet, you may need to download the source and compile it as well (check
+versions above).
+
+<h3 class="unnumberedsec">Updates</h3>
+
+<p>Versions &lt;= 0.4.1 are incompatible with current versions.
+
+   </body></html>
+

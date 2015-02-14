@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="kat5200"
+	>
+	<UserMacro
+		Name="GUICHAN_DIR"
+		Value="libs\guichan-0.8.1"
+	/>
+	<UserMacro
+		Name="SDL_IMAGE_DIR"
+		Value="libs\SDL_image-1.2.12"
+	/>
+	<UserMacro
+		Name="SDL_DIR"
+		Value="libs\SDL-1.2.15"
+	/>
+	<UserMacro
+		Name="ZLIB_DIR"
+		Value="libs\zlib-1.2.8"
+	/>
+	<UserMacro
+		Name="SQLITE3_DIR"
+		Value="SQLITE3
+	/>
+</VisualStudioPropertySheet>

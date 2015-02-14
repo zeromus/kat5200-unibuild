@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{00C930D7-5A7C-4CF4-804B-F2589180FF6E}</ProjectGuid>
+    <RootNamespace>kat5200</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="kat5200.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="kat5200.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">output</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">output</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ZLIB_DIR);libs;$(GUICHAN_DIR)\include;$(SDL_DIR)\include;$(SQLITE3_DIR);$(SDL_IMAGE_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libs/dirent.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ZLIB_DIR);libs;$(GUICHAN_DIR)\include;$(SDL_DIR)\include;$(SQLITE3_DIR);$(SDL_IMAGE_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libs/dirent.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="SQLITE3\sqlite3.c" />
+    <ClCompile Include="src\kat5200.c" />
+    <ClCompile Include="src\core\antic.c" />
+    <ClCompile Include="src\core\boom6502.c" />
+    <ClCompile Include="src\core\cart.c" />
+    <ClCompile Include="src\core\console.c" />
+    <ClCompile Include="src\core\debug.c" />
+    <ClCompile Include="src\core\gtia.c" />
+    <ClCompile Include="src\core\memory.c" />
+    <ClCompile Include="src\core\pia.c" />
+    <ClCompile Include="src\core\pokey.c" />
+    <ClCompile Include="src\core\pokeysound.c" />
+    <ClCompile Include="src\core\sio.c" />
+    <ClCompile Include="src\interface\atari_ntsc.c" />
+    <ClCompile Include="src\interface\db_if.c" />
+    <ClCompile Include="src\interface\input.c" />
+    <ClCompile Include="src\interface\kconfig.c" />
+    <ClCompile Include="src\interface\logger.c" />
+    <ClCompile Include="src\interface\md5.c" />
+    <ClCompile Include="src\interface\media.c" />
+    <ClCompile Include="src\interface\palette.c" />
+    <ClCompile Include="src\interface\sdl_if.c" />
+    <ClCompile Include="src\interface\sha1.c" />
+    <ClCompile Include="src\interface\sound.c" />
+    <ClCompile Include="src\interface\states.c" />
+    <ClCompile Include="src\interface\ui.c" />
+    <ClCompile Include="src\interface\util.c" />
+    <ClCompile Include="src\interface\video.c" />
+    <ClCompile Include="src\gui\bioscfg.cpp" />
+    <ClCompile Include="src\gui\convert.cpp" />
+    <ClCompile Include="src\gui\decoration.cpp" />
+    <ClCompile Include="src\gui\filebrowser.cpp" />
+    <ClCompile Include="src\gui\genericmessage.cpp" />
+    <ClCompile Include="src\gui\gui.cpp" />
+    <ClCompile Include="src\gui\guiinputbutton.cpp" />
+    <ClCompile Include="src\gui\guimain.cpp" />
+    <ClCompile Include="src\gui\infomessage.cpp" />
+    <ClCompile Include="src\gui\inputautolistener.cpp" />
+    <ClCompile Include="src\gui\inputcfg.cpp" />
+    <ClCompile Include="src\gui\joystickevent.cpp" />
+    <ClCompile Include="src\gui\joystickinput.cpp" />
+    <ClCompile Include="src\gui\katgui.cpp" />
+    <ClCompile Include="src\gui\katmenu.cpp" />
+    <ClCompile Include="src\gui\katmenulistener.cpp" />
+    <ClCompile Include="src\gui\log.cpp" />
+    <ClCompile Include="src\gui\mediacfg.cpp" />
+    <ClCompile Include="src\gui\mediacreate.cpp" />
+    <ClCompile Include="src\gui\menubar.cpp" />
+    <ClCompile Include="src\gui\menuitem.cpp" />
+    <ClCompile Include="src\gui\menutop.cpp" />
+    <ClCompile Include="src\gui\palettecfg.cpp" />
+    <ClCompile Include="src\gui\profilechooser.cpp" />
+    <ClCompile Include="src\gui\romlauncher.cpp" />
+    <ClCompile Include="src\gui\romlauncherlistener.cpp" />
+    <ClCompile Include="src\gui\romlaunchermenu.cpp" />
+    <ClCompile Include="src\gui\romlauncheroptions.cpp" />
+    <ClCompile Include="src\gui\sdlguiinput.cpp" />
+    <ClCompile Include="src\gui\soundcfg.cpp" />
+    <ClCompile Include="src\gui\tabbedwindow.cpp" />
+    <ClCompile Include="src\gui\throttle.cpp" />
+    <ClCompile Include="src\gui\userinterfacecfg.cpp" />
+    <ClCompile Include="src\gui\videocfg.cpp" />
+    <ClCompile Include="src\gui\window.cpp" />
+    <ClCompile Include="src\gui\wizard.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\kat5200.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="guichan.vcxproj">
+      <Project>{8968d94e-6e7c-4ce6-b154-41c70638fb05}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="guichan_sdl.vcxproj">
+      <Project>{857f26c8-e193-46c5-b20c-044e2ac1e2c4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="libs\SDL-1.2.15\VisualC\SDLmain\SDLmain.vcxproj">
+      <Project>{da956fd3-e142-46f2-9dd5-c78bebb56b7a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libs\SDL-1.2.15\VisualC\SDL\SDL.vcxproj">
+      <Project>{81ce8daf-ebb2-4761-8e45-b71abcca8c68}</Project>
+    </ProjectReference>
+    <ProjectReference Include="SDL_Image.vcxproj">
+      <Project>{83b660f5-5254-4940-b3c4-ff137b07d428}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="zlib.vcxproj">
+      <Project>{727e8213-ca41-4110-aeed-25146ab60a5c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SQLITE3\sqlite3.h" />
+    <ClInclude Include="SQLITE3\sqlite3ext.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
